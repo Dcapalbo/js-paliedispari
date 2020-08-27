@@ -13,13 +13,27 @@ while (evenOdd != "pari" && evenOdd != "dispari") {
 }
 //3. generate a random number for the computer from 1 to 5
 function numberGenerator(max, min){
-  return Math.floor(Math.random() * (5 - 1));
+  return Math.floor(Math.random() * (max - min) + min);
 }
 //4. make a function to stabilize when a number is even or not
-function Even(number) {
+function even(number) {
   if (number % 2 == 0) {
     return true;
   } else {
     return false;
   }
+}
+//5. insert a prompt to let the User insert the number
+var userN = parseInt(prompt("inserisci un numero compreso tra 1 e 5"));
+while (userN < 1 || userN > 5) {
+  userN = parseInt(prompt("Numero sbagliato, reinserisci il numero"));
+}
+//6. sum the user and the computer number
+var computerNumber = numberGenerator(5, 1);
+var total = computerNumber + userN;
+//7. add a variable to the even function
+var even = even();
+//8. checking if the sum is even or odd
+if ((even && userN == "pari") || (even == false && userN == "dispari")) {
+  alert("Hai vinto");
 }
