@@ -1,39 +1,25 @@
-// Palidroma
-// Chiedere all’utente di inserire una parola
-// Creare una funzione per capire se la parola inserita è palindroma
+// Palindrom
+// Ask to the Utent if the word is palindrom or not
+// create a function to control if the world is palindrom or not
 
 //1. ask to the user to insert a word
 var wordUser = prompt("insert a word");
-var control = true;
-
-
-//2. crete a function usefull to control
-
-function checkingPalindrom(wordUser) {
+//.2 create a variable to invoke the function
+var control = checkingPalindrom(wordUser);
+//.3 create a function usefull to control
+function checkingPalindrom(str) {
   for (var i = 0; i < wordUser.length; i++) {
-    var leftWord = wordUser[i];
-    var rightWord = wordUser.charAt(wordUser.length -i -1);
-    if (leftWord !== rightWord) {
+    var control = true;
+    var readLeft = wordUser[i];
+    var readRight = wordUser.charAt(wordUser.length -i -1);
+    if (readLeft !== readRight) {
       control = false;
     }
   } return control;
 }
-
+//4. print the results in the console;
 if (control) {
   console.log("this is a palindrom");
 } else {
   console.log("this is not a palindrom");
 }
-
-
-
-
-// //3. create a function usefull to find if a word is palindrom or it is not
-// function checkPalindrom (str) {
-//   if (wordUser) {
-//
-//   }
-// }
-
-//3. print on the console the results.
-// console.log(wordUser);
