@@ -9,10 +9,10 @@ var wordUser = prompt("insert a word");
 
 var wordArray = [];
 wordArray.push(wordUser);
-var reversed = wordArray.reverse();
+const reversed = wordArray.reverse();
 
 
-console.log(reversed);
+console.log(wordUser);
 // //3. create a function usefull to find if a word is palindrom or it is not
 // function checkPalindrom (str) {
 //   if (wordUser) {
